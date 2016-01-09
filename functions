@@ -14,5 +14,5 @@ function execute_hooks() {
     exit 0
   fi
   echo "       $hooks_path file found. Running it ..."
-  dokku run $APP $hooks_path
+  dokku enter $APP web $hooks_path
 }
